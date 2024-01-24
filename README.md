@@ -25,7 +25,8 @@ result = x + y
 More features coming very soon
 
 ## Current Operations
-Matrix addition
+Matrix addition , subtraction and multiplication
+Even Now support error handling
 
 ## Upcoming Features
 Mathistic is actively developing new operations to enhance its capabilities. Stay tuned for upcoming features!
