@@ -10,6 +10,10 @@ Mathistic is a powerful tool designed to assist developers in their daily mathem
 
 Mathistic introduces Matrical, a module that simplifies matrix calculations. The example below demonstrates how easy it is to perform matrix addition:
 
+## Getting Start
+Download and add file to your lib folder in python dir
+and just use the following command
+
 ```python
 from matrical import matrical
 
@@ -17,3 +21,17 @@ x = matrical()
 y = matrical()
 
 result = x + y
+```
+More features coming very soon
+
+## Current Operations
+Matrix addition
+
+## Upcoming Features
+Mathistic is actively developing new operations to enhance its capabilities. Stay tuned for upcoming features!
+
+## Contributions
+Contributions are welcome! If you have ideas for new features or improvements, feel free to open an issue or submit a pull request.
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
