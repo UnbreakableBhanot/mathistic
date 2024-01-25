@@ -5,7 +5,7 @@
 # Version - 1
 # First release - 24 jan 2024
 
-class Matrical:
+class matrical:
     
     def __creator(self, matrix):
         rows = int(input("Enter number of Rows: "))
@@ -66,27 +66,27 @@ class Matrical:
                     temp.append([])
                     temp_left_add = 0
                     temp_right_add = 0
-                    for j in range(len(other.A[0])+1):
-                        temp_left_add += (int(self.A[i][j])*int(other.A[j][0]))
-                        temp_right_add += (int(self.A[i][j])*int(other.A[j][1]))
+                    for j in range(len(other.A[0])):
+                        temp_left_add += (int(self.A[i][j]) * int(other.A[j][0]))
+                        temp_right_add += (int(self.A[i][j]) * int(other.A[j][1]))
 
                     temp[i].append(temp_left_add)
                     temp[i].append(temp_right_add)
 
             else:
-                print("multiplication is not possible")
+                print("Multiplication is not possible")
                 
             return temp
         except ValueError:
             print("Please enter correct integer values.")
 
     def transpose(self):
-    temp = []
-    for i in range(len(self.A[0])):
-        temp.append([])
-        for j in range(len(self.A)):
-            temp[i].append(self.A[j][i])
+        temp = []
+        for i in range(len(self.A[0])):
+            temp.append([])
+            for j in range(len(self.A)):
+                temp[i].append(self.A[j][i])
 
-    return self.__show_matrix(temp)
-        self.__show_matrix(temp)
+        return self.__show_matrix(temp)
 
+    
