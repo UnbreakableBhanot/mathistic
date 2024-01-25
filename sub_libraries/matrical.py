@@ -5,45 +5,44 @@
 # Version - 1
 # First release - 24 jan 2024
 
-class matrical:
+class Matrical:
     
-    def __creator(self, Matrix):
-        Rows = int(input("Enter number of Rows"))
-        print("use space for next number","press enter for next line",sep="\n")
-        for i in range(1,Rows+1):
-            user_input = input("->")
-            Matrix.append(user_input.split())
+    def __creator(self, matrix):
+        rows = int(input("Enter number of Rows: "))
+        print("Use space for next number, press enter for next line",sep="\n")
+        for i in range(rows):
+            user_input = input("-> ")
+            matrix.append(user_input.split())
 
     def __init__(self):
         try:
             self.A = []
             self.__creator(self.A)
-            print("Matrices formed for {} ".format(self))
+            print("Matrix formed for {}".format(self))
             self.__show_matrix(self.A)
         except ValueError:
-            print("Please Enter correct Integer Value")
+            print("Please enter correct integer values.")
 
     def __show_matrix(self, other):
-        for i in other:
-            print(i)
-    
-    def __add__(self,other):
+        for row in other:
+            print(row)
+
+    def __add__(self, other):
         try:
             temp = []
             for i in range(len(self.A)):
                 temp.append([])
                 for j in range(3):
                     temp[i].append(int(self.A[i][j]) + int(other.A[i][j]))
-        
+
             return temp
-    
+
         except IndexError:
-            print("For addition Matrices should be of same size")
-
+            print("For addition, matrices should be of the same size.")
         except ValueError:
-            print("Please Enter correct Integer value")
+            print("Please enter correct integer values.")
 
-    def __sub__(self,other):
+    def __sub__(self, other):
         try:
             temp = []
             for i in range(len(self.A)):
@@ -54,18 +53,15 @@ class matrical:
             return temp
 
         except IndexError:
-            print("For Subtraction Matrices should be of same size")
-
+            print("For subtraction, matrices should be of the same size.")
         except ValueError:
-            print("Please Insert correct integer value")
-            
+            print("Please enter correct integer values.")
 
-    def __mul__(self,other):
+    def __mul__(self, other):
         try:
             temp = None
             if len(self.A[0]) == len(other.A) and len(self.A) == len(other.A[0]):
                 temp = []
-            
                 for i in range(len(self.A)):
                     temp.append([])
                     temp_left_add = 0
@@ -76,10 +72,21 @@ class matrical:
 
                     temp[i].append(temp_left_add)
                     temp[i].append(temp_right_add)
-                    
+
             else:
                 print("multiplication is not possible")
                 
             return temp
         except ValueError:
-            print("Please Enter correct Integer Value")
+            print("Please enter correct integer values.")
+
+    def transpose(self):
+    temp = []
+    for i in range(len(self.A[0])):
+        temp.append([])
+        for j in range(len(self.A)):
+            temp[i].append(self.A[j][i])
+
+    return self.__show_matrix(temp)
+        self.__show_matrix(temp)
+
